@@ -9,7 +9,6 @@ let currentTime = 0;
 player.on(
   'timeupdate',
   thr(function (data) {
-    console.log(data.seconds);
     currentTime = data.seconds;
     localStorage.setItem(storageKey, currentTime);
   }, 1000)

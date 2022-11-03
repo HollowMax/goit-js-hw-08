@@ -18,9 +18,8 @@ const onInput = function (e) {
 form.addEventListener('input', throttle(onInput, 500));
 form.addEventListener('submit', e => {
   e.preventDefault();
+  console.log(inputData);
   for (const item in inputData) {
-    console.log(form[item], form[item].value);
-
     delete inputData[item];
   }
   e.currentTarget.reset();
